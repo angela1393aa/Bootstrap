@@ -214,6 +214,7 @@ header {
     right: 0px;
     background-color: #fff;
     z-index: 1;
+    display: none;
   }
   .right {
     width: 20%;
@@ -241,5 +242,8 @@ header {
   }
   .a {
     display: flex;
+  }
+  .menu_btn {
+    display: none;
   }
 }
