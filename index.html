@@ -14,24 +14,29 @@
         <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <input type="checkbox" name="" id="menu_control">
     <nav class="main-nav">
         <div class="container">
             <div class="d-flex justify-content-between">
-                <div class="d-flex ">
-                    <a href="/"><img class="logo " src="./pics_1129/logo.png" alt="HairMap"></a>
-                    <ul class="list-unstyled d-flex m-0">
-                        <li><a href="">找髮型</a></li>
-                        <li><a href="">找設計師</a></li>
-                        <li><a href="">美髮誌</a></li>
+                  <div class="a">
+                  <a href="/"><img class="logo" src="./pics_1129/logo.png" alt="logo"></a>
+                    <ul class="list-unstyled left">
+                      <li><a href="">找髮型</a></li>
+                      <li><a href="">找設計師</a></li>
+                      <li><a href="">美髮誌</a></li>
                     </ul>
                 </div>
-                <div class="d-flex">
-                    <ul class="list-unstyled d-flex m-0">
-                        <li><a href="">註冊</a></li>
-                        <li><a href="">登入</a></li>
-                        <li><a class="setting-btn"></a></li>
-                    </ul>
-                </div>
+                <div class="a">
+                  <label for="menu_control" class="menu_btn" id="menu">
+                    <span></span>
+                  </label>
+                  <ul class="list-unstyled right">
+                    <li><a href="">註冊</a></li>
+                    <li><a href="">登入</a></li>
+                    <li><a class="setting-btn"></a></li>
+                  </ul>
+                  
+              </div>
             </div>
         </div>
     </nav>
@@ -77,9 +82,9 @@
     </div>
     <main class="bg-white">
         <section class="container position-relative pt-5">
-            <div class="position-relative">
-                <h2 class="text-center my-4">熱門主題</h2>
-                <div class="underline position-absolute"></div>
+          <div class="position-relative">
+            <h2 class="text-center my-4">熱門主題</h2>
+            <div class="underline position-absolute"></div>
             </div>
             <div class="row row-cols-2 row-cols-md-4">
                 <figure class="border border-0 bg-transparent position-relative">
@@ -100,7 +105,7 @@
                 </figure>
              </div>
              <div class="row justify-content-end">
-                  <a class="more text-decoration-none text-white border border-danger rounded col-auto">more</a>
+                  <a class="more text-decoration-none text-white border border-danger rounded col-auto m-2">more</a>
              </div>
           </div>
       </section>
@@ -124,7 +129,7 @@
             </figure>
         </div>
         <div class="row justify-content-end">
-          <a class="more text-decoration-none text-white border border-danger rounded col-auto">more</a>
+          <a class="more text-decoration-none text-white border border-danger rounded col-auto mb-5 m-2">more</a>
      </div>
       </section> 
     </main>
@@ -137,19 +142,19 @@
                 </figure>
               </div>
             <div class="col-md-4 align-self-center">
-              <div class="row">
-                <div class="col-auto position-relative align-self-center">
-                  <h2 class="d-inline-block">快速找到好髮型</h2>
+              <div class="row justify-content-center">
+                <div class="col-auto position-relative">
+                  <h2 class="d-inline-block h3">快速找到好髮型</h2>
               <div class="underline position-absolute"></div>
                 </div>
                 <div class="w-100"></div>
-                <div class="col-md-auto col-12 mt-4 align-self-center">
+                <div class="col-md-auto col-12 mt-4">
                   <img src=" ./pics_1129/btn_app_android.png" alt="android_app">
                 </div>
-                <div class="col-md-auto col-12 mt-4 align-self-center">
+                <div class="col-md-auto col-12 mt-4">
                 <img src="./pics_1129/btn_app_ios.png" alt="ios_app">
                   </div>
-                <div class="col-12 mt-2 align-self-center">
+                <div class="col-12 mt-2">
                   <p class="text-danger h3 none">下載並註冊後就可以發表作品嘍!</p>
                 </div>
               </div>
@@ -211,19 +216,19 @@
           </div>
           <div class="col-md-3 col-12">
               <div class="row">
-                <div class="col-6 text-center">
+                <div class="col-6">
                   <img src="./images/email.svg" alt="email">
                   <span>聯絡我們</span>
                 </div>
-                <div class="col-6 text-center">
+                <div class="col-6">
                   <img src="./images/ios.svg" alt="ios"> 
                   <span>ios</span>
                 </div>
-                <div class="col-6 text-center">
+                <div class="col-6">
                   <img src="./images/facebook_g.svg" alt="facebook"> 
                   <span>紛絲專業</span>
                 </div>
-                <div class="col-6 text-center">
+                <div class="col-6">
                   <img src="./images/android.svg" alt="android">
                   <span>Android</span>
                 </div>
@@ -241,5 +246,14 @@
       </div>
     </footer>
 </body>
-
+<script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#menu").on("click", function () {
+        $("ul").toggle();
+      });
+    </script>
 </html>
